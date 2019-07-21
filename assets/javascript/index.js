@@ -188,7 +188,26 @@ $("#start").on("click", function() {
         $("#submit").hide();
 
         //adding the part of if the user wins, loses, leaves questions unanswered
-        
+        $("#resultsMessage").html("<h3>Times Up!</h3>");
+        $("#correct").html("Correct Answers: " + correctAnswers);
+        $("#incorrect").html("Incorrect Answers: " + incorrectAnswers);
+        $("#unanswered").html("Unanswered: " + unanswered);
     }
+        //defining keepingScore(); and creating user input with variables
+        //.val() method is primarily used to get the values of form elements such as input, select and textarea. When called on an empty collection, it returns undefined
+        function keepingScore();
 
-})
+            var userAnswer1 = $("input[name='answer1']:checked").val();
+            var userAnswer2 = $("input[name=='answer2']:checked").val();
+            var userAnswer3 = $("input[name=='answer3']:checked").val();
+            var userAnswer4 = $("input[name=='answer4']:checked").val();
+            var userAnswer5 = $("input[name=='answer5']:checked").val();
+            var userAnswer6 = $("input[name=='answer6']:checked").val();
+            var userAnswer7 = $("input[name=='answer7']:checked").val();
+            var userAnswer8 = $("input[name=='answer8']:checked").val();
+            var userAnswer9 = $("input[name=='answer9']:checked").val();
+            var userAnswer10 = $("input[name=='answer10']:checked").val();
+            
+
+
+
