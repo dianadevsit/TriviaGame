@@ -145,6 +145,50 @@ $("#start").on("click", function() {
         intervalid = setInterval(decrement, 1000);
     }
     
+    //timer to count down by one
+    function decrement() {
+        number--;
+    $("#time").html("<h2>Time Remaining " + number + " Seconds </h2>" + "<br>");
+    if (number === 0) {
+    //call function and stop timer to the countdowns
+    stop();
+    keepingScore();
+    displayResults();
+
+        }
+    }
     
+    function stop() {
+        clearInterval(intervalid);
+    }
+    //putting all of the tags into divs so it can hide the parent div
+    function displayResults() {
+        $("#time").hide();
+        //questions and answers
+        $("#question1").hide();
+        $("#answer1").hide();
+        $("#question2").hide();
+        $("#answer2").hide();
+        $("#question3").hide();
+        $("#answer3").hide();
+        $("#question4").hide();
+        $("#answer4").hide();
+        $("#question5").hide();
+        $("#answer5").hide();
+        $("#question6").hide();
+        $("#answer6").hide();
+        $("#question7").hide();
+        $("#answer7").hide();
+        $("#question8").hide();
+        $("#answer8").hide();
+        $("#question9").hide();
+        $("#answer9").hide();
+        $("#question10").hide();
+        $("#answer10").hide();
+        $("#submit").hide();
+
+        //adding the part of if the user wins, loses, leaves questions unanswered
+        
+    }
 
 })
