@@ -129,7 +129,21 @@ $("#start").on("click", function() {
     + "<input type='radio' name='answer10' value='3'>" +"<label>" + questions[9].answersListed[3] + "</label><br><br>"
     );
     
-    
+    //create submit button
+    $("#submit").html("<button id='done' class='btn'>Done</button>");
+    //done button will have click event to run keepingScore(); and displayResults();
+    //keepingScore(); will keep track base on if answer is correct, incorrect, or not answered
+    //displayResults(); will display
+    $("#done").on("click", function() {
+        keepingScore();
+        displayResults();
+        });
+});
+    //timer
+    function run() {
+        clearInterval(intervalid);
+        intervalid = setInterval(decrement, 1000);
+    }
     
     
 
