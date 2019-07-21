@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Trivia Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 
 </head>
 
 <body>
     <div class="container">
+        <h1>Trivial  Trivia!</h1>
         <div id="quiz" class="main-content">
             <!-- button to start the game -->
-            <button id="start" class="btn">Start Trivia Game</button>
+            <div id="start" class="btn">Start Trivia Game</button>
 
             <!-- time remaining -->
             <div id="time"></div>
@@ -31,12 +35,14 @@
             <div id="question8"></div>
             <div id="question9"></div>
             <div id="question10"></div>
+            <div id="submit"></div>
 
             <!-- end game with more divs -->
+            <div id="resultMessage"></div>
             <div id="rightAnswers"></div>
             <div id="wrongAnswers"></div>
             <div id="noAnswers"></div>
-            <div id="wrong"></div>
+           
 
         </div>
     </div>
