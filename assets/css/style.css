@@ -15,4 +15,18 @@ h1 {
 }
 .container {
     text-align: center;
+    margin: 0 15%;
+    padding: 30px;
+    background: #888888;
+}
+
+.main-content {
+    padding: 5% 0;
+}
+
+.btn {
+    padding: 15px 75 px;
+    font-size: 20px;
+    background: #ffadf8;
+    border: 2px solid #eeeeee;
 }
