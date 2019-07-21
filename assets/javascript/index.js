@@ -42,11 +42,27 @@ var questions = [{
     answersListed:["France", "Canada", "Russia", "United States of America"],
     answer:[0]
 }, {
-    question:"What is Wolverine's real name?"
+    question:"What is Wolverine's real name?",
     answersListed:["Michael Hartlett", "Kenneth Locke", "James Howlett", "Chris Smitters"],
     answer:[2]
 }, {
-    question:"What kind of animal is a dingo?"
+    question:"What kind of animal is a dingo?",
     answersListed:["A dog", "A kangaroo", "A koala", "None of the Above"],
     answer:[0]
 }];
+
+//using jquery to start the button for the game
+$("#start").on("click", function() {
+    //display the time counter
+    $("#time").html("<h3>Time Remaining: 30 Seconds</h3>" + "<br>");
+    run();
+
+    //using id classes for questions
+    $("question1").html("<h4>" + questions[1].question +"<h4>");
+    $("#answer1").html("<input type='radio' name='answer1' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
+    + "<input type='radio' name='answer1' value='1'>" + "<label>" + questions[0].answersListed[1] + "</label>" 
+    + "<input type='radio' name='answer1' value='2'>" + "<label>" + questions[0].answersListed[2] + "</label>"
+    + "<input type='radio' name='answer1' value='3'>" +"<label>" + questions[0].answersListed[3] + "</label><br><br>"
+    );
+    
+})
