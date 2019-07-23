@@ -4,6 +4,7 @@ var wrongAnswers = 0;
 var noAnswers = 0;
 var number = 30;
 var intervalid;
+
 // });
 $("#start").on("click", function() {
     $(this).hide();
@@ -58,6 +59,7 @@ var questions = [{
     answersListed:["A dog", "A kangaroo", "A koala", "None of the Above"],
     answer:0
 }];
+// var question1 = questions[0]
 
 //using jquery to start the button for the game
     // $("#start").on("click", function() {
@@ -65,12 +67,13 @@ var questions = [{
     // //display the time counter
     // $("#time").html("<h3>Time Remaining: 30 Seconds</h3>" + "<br>");
     // run();
-    
 
     //using id classes for questions
+    //trying to use input type = radio as the structure of my questions while calling upon ids
+    //using an array to call upon the questions listed and the answers listed
     //question one
-    $("question1").html("<h4>" + questions[0].question +"<h4>");
-    $("#answer1").html("<input type='radio' name='answer1' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
+    $("#question1").append("<h4>" + questions[0].question +"<h4>");
+    $("#answer1").append("<input type='radio' name='answer1' value=0>" + "<label>" + questions[0].answerListed[0] + "</label>"
     + "<input type='radio' name='answer1' value='1'>" + "<label>" + questions[0].answersListed[1] + "</label>" 
     + "<input type='radio' name='answer1' value='2'>" + "<label>" + questions[0].answersListed[2] + "</label>"
     + "<input type='radio' name='answer1' value='3'>" +"<label>" + questions[0].answersListed[3] + "</label><br><br>"
