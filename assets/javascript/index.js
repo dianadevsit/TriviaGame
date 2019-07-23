@@ -5,6 +5,11 @@ var noAnswers = 0;
 var number = 30;
 var intervalid;
 // });
+$("#start").on("click", function() {
+    $(this).hide();
+    //display the time counter
+    $("#time").html("<h3>Time Remaining: 30 Seconds</h3>" + "<br>");
+    run();
 //questions for trivia game
 //using an array to select correct answer
 //20 questions? -- I only did 10
@@ -55,12 +60,12 @@ var questions = [{
 }];
 
 //using jquery to start the button for the game
-    $("#start").on("click", function() {
-    $(this).hide();
-    //display the time counter
-    $("#time").html("<h3>Time Remaining: 30 Seconds</h3>" + "<br>");
-    run();
-    start();
+    // $("#start").on("click", function() {
+    // $(this).hide();
+    // //display the time counter
+    // $("#time").html("<h3>Time Remaining: 30 Seconds</h3>" + "<br>");
+    // run();
+    
 
     //using id classes for questions
     //question one
@@ -305,3 +310,4 @@ var questions = [{
                 wrongAnswers++;
             }
         }
+    
